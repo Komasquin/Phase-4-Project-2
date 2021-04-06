@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="product_table.js"></script>
+</head>
+<body onload="CreateTableFromJSON()">
+    <nav class="navbar navbar-expand-sms">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Product Manager</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Finances.html">Finances</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="col">
+        <h3>Table</h3>
+        <p id="showData"></p>
+    </div>
+        
+    <div class="col">
+        <h3>Modify Cost</h3>
+        <label>Vendor ID:</label>  <input type="number" id="dealidedit"/>
+        <input type="button" onclick="FinShowEdit()" value="Find Cost"/><br>
+        <label>Project Cost:</label>  <input type="number" id="costEdit"/>
+      <input type="button" onclick="FinEditRow()" value="Edit" />
+      </div>
+</body>
+</html>

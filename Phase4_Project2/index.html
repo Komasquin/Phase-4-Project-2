@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="product_table.js"></script>
+</head>
+<body onload="CreateTableFromJSON()">
+    <nav class="navbar navbar-expand-sms">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Product Manager</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Finances.html">Finances</a>
+            </li>
+        </ul>
+    </nav>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col">
+                <h3>Table</h3>
+                <p id="showData"></p>
+            </div>
+            <div class="col">
+                <h3>Add to Table</h3>
+                    <label>Vendor Name:</label>  <input type="text" id="clientNameInput"/><br/>
+                    <label>Project Name:</label>  <input type="text" id="projectNameInput"/><br/>
+                    <label>Manager Name:</label>  <input type="text" id="projectManagerInput"/><br/>
+                    <label>Project Cost:</label>  <input type="number" id="projectCostInput"/><br/>
+                <input type="button" onclick="AddNewDeal()" value="Save" />
+            </div>
+         
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col"><h3>Delete Row</h3>
+                <p id=deleteId>
+                    <label>Vendor ID:</label> <input type="number" id="vendorId"/><br/>
+                </p>
+                    <input type="button" onclick="DeleteRow()" value="Delete"/>
+              </div>
+
+              <div class="col">
+                <p id="displayinfo">
+                    <h3>Edit Table</h3>
+                        <label>Vendor ID:</label>  <input type="number" id="dealidedit"/><br/>
+                        <label>Project Vendor:</label>  <input type="text" id="clientNameEdit"/><br/>
+                        <label>Project Name:</label>  <input type="text" id="projectNameEdit"/><br/>
+                        <label>Project Manager:</label>  <input type="text" id="projectManagerEdit"/><br/>
+                </p>
+                    <input type="button" onclick="ShowEdit()" value="Fill Info for ID"/><br>
+                    <input type="button" onclick="EditRow()" value="Edit"/>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
